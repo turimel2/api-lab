@@ -1,3 +1,3 @@
-fetch('https://makeup-api.herokuapp.com/api/v1/products.json')
+fetch('https://pokeapi.co/api/v2/pokemon/'pikachu')
 .then(res => res.json())
 .then(data => console.log(data));
