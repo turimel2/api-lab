@@ -1,6 +1,22 @@
 body {
-font-family: sans-serif;
-max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+font-family: system-ui, sans-serif;
+  background: #f2f4f8;
+max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
 }
+
+h1 { color: #cc0000; }
+
+.card {
+background: white;
+border:  3px solid #ffcb05;
+border-radius: 12px;
+padding: 20px;
+max-width: 320px;
+margin: 24px auto;
+}
+
+.card img { width: 140px; image-rendering: pixelated; }
+.card h2 { text-transform: capitalize; }
