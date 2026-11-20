@@ -16,7 +16,10 @@ results.innerHTML = `
 <p>Height: ${data.height} Weight: ${data.weight}</p>
   </article>
 `;
-});
+})
+ .catch(() => {
+  results.innerHTML = '<p>No Pokémon found. Try another name.</p>';
+ });
 }
 
 button.addEventListener('click', () => {
