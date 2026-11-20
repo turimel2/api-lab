@@ -1,8 +1,13 @@
-fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+const results = document.getElementById('results');
+const input = document.getElementById('search');
+const button = document.getElementById('search-btn');
+
+function loadPokemon(name) {
+ results.innerHTML = '<p>Loading...</p>';
+fetch('https://pokeapi.co/api/v2/pokemon/' + name.toLowerCase())
 .then(res => res.json())
 .then(data => {
 console.log(data);
-const results = document.getElementById('results');
 results.innerHTML = `
 <article class="card">
  <img src="${data.sprites.front_default}" alt="${data.name}">
@@ -12,3 +17,11 @@ results.innerHTML = `
   </article>
 `;
 });
+}
+
+button.addEventListener('click', () => {
+  const name = input.value.trim();
+  if (name) loadPokemon(name);
+});
+
+loadPokemon('pikachu');
